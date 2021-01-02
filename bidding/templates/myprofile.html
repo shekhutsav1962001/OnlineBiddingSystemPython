@@ -1,0 +1,55 @@
+{% extends 'base2.html' %}
+{% block content %}
+<marquee behavior="alternate" ><h3>Bid Now And Grab More!!!</h3></marquee>
+<center>
+        <table border="0">
+            <tr>
+                <td height="20px"></td>
+                <td height="20px"></td>
+            </tr>
+            <tr>
+                <td><h4>First name :</h4></td>
+                <td><h4>{{details.first_name}}</h4></td>
+            </tr>
+            <tr>
+                <td height="20px"><hr></td>
+                <td height="20px"><hr></td>
+            </tr>
+            <tr>
+                <td><h4>Last name :</h4></td>
+                <td><h4>{{details.last_name}}</h4></td>
+            </tr>
+            <tr>
+                <td height="20px"><hr></td>
+                <td height="20px"><hr></td>
+            </tr>
+            <tr>
+                <td><h4>Contact no :</h4></td>
+                <td><h4>{{contact}}</h4></td>
+            </tr>
+            <tr>
+                <td height="20px"><hr></td>
+                <td height="20px"><hr></td>
+            </tr>
+            <tr>
+                <td class="right"><h4>User name : </h4></td>
+                <td><h4>{{details.username}}</h4></td>
+            </tr>
+            <tr>
+                <td height="20px"><hr></td>
+                <td height="20px"><hr></td>
+            </tr>
+            <tr>
+                <td><h4>Email-id :</h4></td>
+                <td><h4>{{details.email}}</h4></td>
+            </tr>
+            <tr>
+                <td height="20px"><hr></td>
+                <td height="20px"><hr></td>
+            </tr>
+
+        </table>
+    </center>
+</div>
+    
+{% endblock %}

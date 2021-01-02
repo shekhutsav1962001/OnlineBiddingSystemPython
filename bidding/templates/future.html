@@ -1,0 +1,53 @@
+{% extends 'base2.html' %}
+{% block content %}
+<div class="container">
+    <h1>Future Auction</h1>
+{% for i in items%}
+
+    <center>
+    <table border="0">
+        <tr>
+            <td height="20px"></td>
+            <td width="200px" height="20px"></td>
+        </tr>
+    <tr>
+        <td colspan="2"><h3><b>{{i.name}}</b></h3></td>
+        <td rowspan="5"><img src="{{i.profile.url}}" class="img" alt=""></td>
+    </tr>
+    <tr>
+        <td height="20px"></td>
+        <td width="200px" height="20px"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><h4>{{i.short_description}}</h4></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="20px"></td>
+        <td height="20px"></td>
+    </tr>
+    <tr>
+        <td><h4>Current Price : {{i.currentPrice}}₹</h4></td>
+        <td><h4>Base Price : {{i.basePrice}}₹</h4></td>
+    </tr>
+    <tr>
+        <td height="20px"></td>
+        <td height="20px"></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Auction Date : {{i.start_date}}</h4></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="20px"></td>
+        <td height="20px"></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Status : {{i.status}}</h4></td>
+        <td></td>
+    </tr>
+</table>
+<hr>
+{% endfor%}
+<marquee behavior="alternate" ><h3>Bid Now And Grab More!!!</h3></marquee>  
+{% endblock %}

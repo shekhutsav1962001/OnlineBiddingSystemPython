@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>Current Auction</h2>
+    <div class="row">
+{% for i in items%}
+
+    
+        <div class="col-md-3">
+            <div class="product-top">
+                <img src="{{i.profile.url}}" alt="">
+                <div class="overlay"><a href="items/biditem?id={{i.id}}">
+                    <!-- <input type="button" class="btn btn-secondary fa fa-eye" aria-hidden="true" name="view_item"> -->
+                    <button type="button" class="btn btn-secondary" title="view and bid item">
+                    <i class="fa fa-eye"  aria-hidden="true"></i></button>
+                </a>
+                </div>
+            </div>
+
+            <div class="product-bottom text-center">
+                <h3>{{i.name}}</h3>
+                <h5>  CURRENT-PRICE : <font color="red">{{i.currentPrice}} ₹ </font></h5>
+                <hr>
+                <!-- <h5>Status : {{i.status}}</h5> -->
+            </div>
+        </div>
+    
+{% endfor %}
+</div>
+</div>
+{% endblock %}

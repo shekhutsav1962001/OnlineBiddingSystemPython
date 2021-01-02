@@ -1,0 +1,119 @@
+{% extends 'base2.html' %}
+{% block content %}
+<div class="container" >
+    
+    <!-- <div><b><h3>Your selling items :</h3></b></div> -->
+
+
+    <!-- <p class="p">.</p> -->
+
+    <div><b><h4>your items in past :</h4></b></div>
+{% for i in pitem%}
+<center>
+<table border="0">
+    <tr>
+        <td colspan="2"><h3><b>{{i.name}}</b></h3></td>
+        <td rowspan="5"><img src="{{i.profile.url}}" class="img" alt=""></td>
+    </tr>
+    <tr>
+        <td colspan="2"><h4>{{i.short_description}}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>Current Price : {{i.currentPrice}}₹</h4></td>
+        <td><h4>Base Price : {{i.basePrice}}₹</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Auction Date : {{i.start_date}}</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Sold status : {{i.sold}}</h4></td>
+    </tr>
+</table>
+</center>
+<hr>
+{%endfor%}
+<hr>
+
+
+    <b><h4>Your items in live :</h4></b>
+
+{% for i in litem%}
+<center>
+<table border="0" >
+    <tr>
+        <td colspan="2"><h3><b>{{i.name}}</b></h3></td>
+        <td rowspan="5"><img src="{{i.profile.url}}" class="img" alt=""></td>
+    </tr>
+    <tr>
+        <td colspan="2"><h4>{{i.short_description}}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>Current Price : {{i.currentPrice}}₹</h4></td>
+        <td><h4>Base Price : {{i.basePrice}}₹</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Auction Date : {{i.start_date}}</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Sold status : {{i.sold}}</h4></td>
+    </tr>
+</table>
+</center>
+<hr>
+{%endfor%}
+<hr>
+<b><h4>Your items in future :</h4></b>
+{% for i in fitem%}
+<center>
+<table border="0">
+    <tr>
+        <td colspan="2"><h3><b>{{i.name}}</b></h3></td>
+        <td rowspan="5"><img src="{{i.profile.url}}" class="img" alt=""></td>
+    </tr>
+    <tr>
+        <td colspan="2"><h4>{{i.short_description}}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>Current Price : {{i.currentPrice}}₹</h4></td>
+        <td><h4>Base Price : {{i.basePrice}}₹</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Auction Date : {{i.start_date}}</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Sold status : {{i.sold}}</h4></td>
+    </tr>
+</table>
+</center>
+<hr>
+{%endfor%}
+<hr>
+    <b><h4>Item that you are bidded :</h4></b>
+{% for i in biddeditem%}
+<center>
+<table border="0">
+    <tr>
+        <td colspan="2"><h3><b>{{i.name}}</b></h3></td>
+        <td rowspan="5"><img src="{{i.profile.url}}" class="img" alt=""></td>
+    </tr>
+    <tr>
+        <td colspan="2"><h4>{{i.short_description}}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>Current Price : {{i.currentPrice}}₹</h4></td>
+        <td><h4>Base Price : {{i.basePrice}}₹</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Auction Date : {{i.start_date}}</h4></td>
+    </tr>
+    <tr>
+        <td colspan="2" ><h4>Sold status : {{i.sold}}</h4></td>
+    </tr>
+</table>
+</center>
+<hr>
+{%endfor%}
+<hr>
+<marquee behavior="alternate" ><h3>Bid Now And Grab More!!!</h3></marquee>
+<hr>
+{% endblock %}

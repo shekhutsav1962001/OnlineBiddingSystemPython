@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Yourself</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Concert+One|Oswald|Quicksand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                <form action="/register" method="POST">{% csrf_token %}
+                    <h2>Bid Mafia</h2>
+                    <input type="text" class="field" placeholder="Enter First Name" name="fname" required>
+                    <input type="text" class="field" placeholder="Enter Last Name" name="lname" required>
+                    <input type="text" class="field"  placeholder="Enter contact no" pattern="[1-9][0-9]{9}" name="contact" required>
+                    <input type="text" class="field" placeholder="Enter Username" name="name" required>
+                    <input type="email" class="field" placeholder="Enter Email-id" name="email" required>
+                    <input type="password" class="field" placeholder="Enter Password" name="p1" required>
+                    <input type="password" class="field" placeholder="Re Enter Password" name="p2" required>
+                    <input type="submit" class="btn" value="submit">
+                    <input type="reset" class="btn" value="Reset">
+                </form>
+                </div>
+                {% for m in messages %}
+			<center><font color="red"><h2>{{m}}</h2></font></center>
+		{% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

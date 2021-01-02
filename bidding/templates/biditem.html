@@ -1,0 +1,97 @@
+{% extends 'base2.html' %}
+{% block content %}
+
+<div class="container">
+    <center>
+            <table border="0">
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    
+                    <td>Name : </td>
+                    <td><b>{{item.name}}</b></td>
+                </tr>
+                
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td class="right">Tag :</td>
+                    <td>{{item.tag}}</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    
+                    <td width="30%">Short Description : </td>
+                    <td width="60%">{{item.short_description}}</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td>Long Description :</td>
+                    <td>{{item.long_description}}</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td>Base Price :</td>
+                    <td>{{item.basePrice}}₹</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td>Current Price :</td>
+                    <td>{{item.currentPrice}}₹</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td>profile image :</td>
+                    <td><img src={{item.profile.url}} height="300" width="400"></td>
+                </tr>
+                <tr>
+                    <td height="10px"></td>
+                    <td height="10px"></td>
+                </tr>
+                <tr>
+                    <td>{%if item.img1 %}<img src={{item.img1.url}} height="300" width="400"></td>{%endif%}
+                    <td>{%if item.img2 %}<img src={{item.img2.url}} height="300" width="400"></td>{%endif%}
+                </tr>
+                <tr>
+                    <td height="10px"></td>
+                    <td height="10px"></td>
+                </tr>
+                <tr>
+                    <td>{%if item.img3 %}<img src={{item.img3.url}} height="300" width="400"></td>{%endif%}
+                    <td>{%if item.img4 %}<img src={{item.img4.url}} height="300" width="400"></td>{%endif%}
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                <form action="validate">
+                    <td>Entre Amount for Bid :<input type="hidden" name="iid" value={{item.id}}></td>
+                    <td><input type="number" name="bidrs" class="field" placeholder="Enter your amount" min={{item.currentPrice}}></td>
+                </tr> <tr><td></td><td>
+                    <input type="submit" class="btt third" value="Bid now">
+                    </form></td></tr>
+            </table>
+        </center>
+        </form>
+    </div>
+    {% endblock %}

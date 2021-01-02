@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bid Mafia</title>
+        <link rel="stylesheet" href="../static/css/nav.css">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    </head>
+    <body>
+        <p class="hhhh">
+            Where the Wolrld goes to shop
+            <span>
+              bid mafia
+            </span>
+            &mdash; don't miss just bid &mdash;
+          </p>
+        <div class="khali">
+           
+            <div class="wrapper">
+                <div class="ffuk">
+                    <ul>
+                        <li><a href="http://127.0.0.1:8000/home">Home</a></li>
+                        <li><a href="logout">Logout</a></li>
+                        <!-- <li><a href="#">Le maro</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <form action="additem" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <center>
+            <table border="0">
+                <marquee behavior="alternate" ><h3>Bid Now And Grab More!!!</h3></marquee>  
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td class="right">Item name : </td>
+                    <td><input type="text" class="field" name="iname" placeholder="Enter item name" required></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    
+                    <td>profile image : </td>
+                    <td><input type="file" class="field" name="img" accept="image/*" required></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    
+                    <td width="30%">Optional image1 : </td>
+                    <td width="60%"><input type="file" class="field" name="img1" accept="image/*" ></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>Optional image2 : </td>
+                    <td><input type="file" class="field" name="img2" accept="image/*" ></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>Optional image3 : </td>
+                    <td><input type="file" class="field" name="img3" accept="image/*" ></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>Optional image4 : </td>
+                    <td><input type="file" class="field" name="img4" accept="image/*" ></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>Tag : </td>
+                    <td><input type="text" class="field" name="itag" placeholder="Enter item tag" size="53" required></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>Short discription : </td>
+                    <td><input type="text" class="field" maxlength="50" name="sdis" placeholder="Enter Short Description" size="53" required></textarea></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>long discription : </td>
+                    <td><textarea rows="5" cols="50" class="field" name="ldis" placeholder="Enter Long Description"></textarea></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Set base price :
+                    </td>
+                    <td>
+                        <input type="text" class="field" name="iprice" placeholder="Enter price in numbers" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Auction date :
+                    </td>
+                    <td>
+                        <input type="date" name="s_date" class="field" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+					<td colspan="2" align="center" ><font color="white"><input type="submit" class="btt third" value="Upload"></td>
+                </tr>
+                <tr>
+                    <td height="60px"></td>
+                    <td height="60px"></td>
+                </tr>
+            </form>
+                <tr>
+                    <td>{% for m in messages %}
+                        <center><font color="red"><h2>{{m}}</h2></font></center>
+                    {% endfor %}</td>
+                    <td></td>
+                </tr>
+            </table>
+        
+        </center>
+    </div>
+    </body>

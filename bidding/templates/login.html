@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bid Mafia : : Login</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Concert+One|Oswald|Quicksand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                    <form action="" method="post">{% csrf_token %}
+                    <h2>Bid now and grab more</h2>
+                    <input type="text" class="field" placeholder="User Name" name="un" required>
+                    <input type="password" class="field" placeholder="Your Password" name="pa" required>
+                    <input type="submit" class="btn" value="Login" name="login">
+                    <input type="reset" class="btn" value="Reset">
+                    <div class="niche">
+                        New User? <a href="register" >Register</a>
+                    </div>
+                    <a href="password-reset">Forgot Password?</a>
+                </form>
+                </div> 
+                {% for m in messages %}
+                <center><font color="red"><h2>{{m}}</h2></font></center>
+            {% endfor %}
+            </div>            
+        </div>
+    </body>
+</html>
